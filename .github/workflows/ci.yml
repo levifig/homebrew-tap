@@ -1,0 +1,34 @@
+name: Homebrew Tap CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  formula:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Register local tap
+        run: |
+          tap_dir="$(brew --repo)/Library/Taps/levifig/homebrew-tap"
+          mkdir -p "$(dirname "$tap_dir")"
+          rm -rf "$tap_dir"
+          ln -s "$GITHUB_WORKSPACE" "$tap_dir"
+
+      - name: Style
+        run: brew style levifig/tap/loaf
+
+      - name: Audit
+        run: brew audit --strict --online levifig/tap/loaf
+
+      - name: Install
+        run: brew install --build-from-source levifig/tap/loaf
+
+      - name: Test
+        run: brew test levifig/tap/loaf

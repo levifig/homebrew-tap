@@ -1,7 +1,7 @@
 class Loaf < Formula
   desc "Opinionated agentic framework for AI coding assistants"
   homepage "https://github.com/levifig/loaf"
-  version "2.0.0-alpha.1"
+  version "2.0.0-alpha.2"
   license "MIT"
 
   depends_on "git"
@@ -9,20 +9,20 @@ class Loaf < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/levifig/loaf/releases/download/v#{version}/loaf_#{version}_darwin-arm64.tar.gz"
-      sha256 "50699edd5d272486f49898ccefb1f6a7c9a2c0597b5a62cd384815a48c6f1407"
+      sha256 "61f3d3b9e537310fbeec97afa47b5653b72bcf80efa36ba001b1b4ea5580460b"
     else
       url "https://github.com/levifig/loaf/releases/download/v#{version}/loaf_#{version}_darwin-x64.tar.gz"
-      sha256 "740ba5b3e1da06063a28e7c9dd00bb41117585abfd961702d4336f0622103af2"
+      sha256 "0c0716e0f63e11633d92b4649e8e7867dc80463f6fb3f04f0ec6e7a2dd07366e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/levifig/loaf/releases/download/v#{version}/loaf_#{version}_linux-arm64.tar.gz"
-      sha256 "9375297c0ff6bc4a124fff202a56026a3872ebdfd41b313305973fde141a6a4c"
+      sha256 "c6ca90eed85d40362b398f298d57efa9c6dfc064371655420ddd2a5d303e11f2"
     else
       url "https://github.com/levifig/loaf/releases/download/v#{version}/loaf_#{version}_linux-x64.tar.gz"
-      sha256 "8a7a8d1bae2717fa38a2cbb751da313c5588d8a5b49bd29edac931437d16150d"
+      sha256 "f9526fc73862ff29f5bb56be0a4cdf5e0f3df5a8654892c5d584e1ba76304155"
     end
   end
 

@@ -7,21 +7,21 @@ class Loaf < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/levifig/loaf/releases/download/v0.2.20/loaf_0.2.20_darwin-arm64.tar.gz"
-      sha256 "0ae119f2f317fe84117f17a23c5415198fa34f9ed9799ddf91d0c1d8497ad8e7"
+      url "https://github.com/levifig/loaf/releases/download/v0.2.21/loaf_0.2.21_darwin-arm64.tar.gz"
+      sha256 "20cdba7cea9af0bd546b7eacacbf21a875b579bb01949f260517408b47422fd9"
     else
-      url "https://github.com/levifig/loaf/releases/download/v0.2.20/loaf_0.2.20_darwin-x64.tar.gz"
-      sha256 "1b31c508a4c16480ee125f9e9f885b9c432757c846ed81bc76689abb2c74f395"
+      url "https://github.com/levifig/loaf/releases/download/v0.2.21/loaf_0.2.21_darwin-x64.tar.gz"
+      sha256 "8692eb9e0837cbf610ecfca7c63dc56ba2762c702ad2a41b3fe54b698e6d990b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/levifig/loaf/releases/download/v0.2.20/loaf_0.2.20_linux-arm64.tar.gz"
-      sha256 "ef06c75228237bfe1469a45b265253f9b8a8e5f1ed8fab08c0e9ab1a6ca4164a"
+      url "https://github.com/levifig/loaf/releases/download/v0.2.21/loaf_0.2.21_linux-arm64.tar.gz"
+      sha256 "fd599d39577e476fc555ffaedc37762a2f8246e892b23eef1b2c5e1c60471620"
     else
-      url "https://github.com/levifig/loaf/releases/download/v0.2.20/loaf_0.2.20_linux-x64.tar.gz"
-      sha256 "5ff10ec8fa1c5b09ddd3d2c70eba08d42858703d4dcafe2de5d062ba59f7a7ed"
+      url "https://github.com/levifig/loaf/releases/download/v0.2.21/loaf_0.2.21_linux-x64.tar.gz"
+      sha256 "ca4e3e2d729394f61662866606470cba7a60a6e067eeb1b610230e3472b75692"
     end
   end
 

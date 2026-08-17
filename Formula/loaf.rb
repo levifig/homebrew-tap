@@ -1,6 +1,7 @@
 class Loaf < Formula
   desc "Opinionated agentic framework for AI coding assistants"
   homepage "https://github.com/levifig/loaf"
+  version "0.3.1"
   license "MIT"
 
   depends_on "git"

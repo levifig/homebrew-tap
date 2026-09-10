@@ -1,33 +1,33 @@
 class Loaf < Formula
   desc "Opinionated agentic framework for AI coding assistants"
   homepage "https://github.com/levifig/loaf"
-  version "0.3.1"
+  version "0.5.0"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/levifig/loaf/releases/download/v0.3.1/loaf_0.3.1_darwin-arm64.tar.gz"
-      sha256 "3b15c9853bf59ea3fc3167b7fc0cd377561c7c185728f7f192a53dabbd94021f"
+      url "https://github.com/levifig/loaf/releases/download/v0.5.0/loaf_0.5.0_darwin-arm64.tar.gz"
+      sha256 "ccab6b69b3a7f8ea504253c1d7ab204a02f3738d424102b019c01407e5687902"
     else
-      url "https://github.com/levifig/loaf/releases/download/v0.3.1/loaf_0.3.1_darwin-x64.tar.gz"
-      sha256 "8ccdb26520f58bd605cfac18838525bd132626505e6f0b2fd0f0a3cd6def40ee"
+      url "https://github.com/levifig/loaf/releases/download/v0.5.0/loaf_0.5.0_darwin-x64.tar.gz"
+      sha256 "14ba7474011be443b5287d1a10f68e2d51c17e91c15e087a41f6eecc325ea902"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/levifig/loaf/releases/download/v0.3.1/loaf_0.3.1_linux-arm64.tar.gz"
-      sha256 "48cdb4e48c8d22e3a31249c33731ce2b809600ad6fa2e5c7ec04db1174ffae4d"
+      url "https://github.com/levifig/loaf/releases/download/v0.5.0/loaf_0.5.0_linux-arm64.tar.gz"
+      sha256 "f89f7d98bcf8871b19f20e1747f159f898986b6a1e62beb383333bce506abca0"
     else
-      url "https://github.com/levifig/loaf/releases/download/v0.3.1/loaf_0.3.1_linux-x64.tar.gz"
-      sha256 "1102328a7c876c273b6c0236556acb80e93d255ad3cdc86a80c9cce8c64b5800"
+      url "https://github.com/levifig/loaf/releases/download/v0.5.0/loaf_0.5.0_linux-x64.tar.gz"
+      sha256 "f7faee70059f8579cb558f45f7dee8a19a51517a9f1438cd9fbf7d7668a04429"
     end
   end
 
   def install
-    libexec.install "bin", "package.json", "config", "content", "dist", "plugins"
+    libexec.install "bin", "package.json", "config", "content", "vnext", "dist", "plugins", ".claude-plugin"
     bin.write_exec_script libexec/"bin/loaf"
   end
 
